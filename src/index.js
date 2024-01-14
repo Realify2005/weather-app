@@ -1,7 +1,8 @@
 async function fetchData(city) {
   try {
     const response = await fetch(
-      `http://api.weatherapi.com/v1/current.json?key=b08cce43980e41f7bb580301241401&q=${city}`
+      `http://api.weatherapi.com/v1/current.json?key=b08cce43980e41f7bb580301241401&q=${city}`,
+      { mode: "cors" }
     );
 
     if (!response.ok) {
